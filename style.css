@@ -426,7 +426,6 @@ a {
     padding: 20px;
     
     border-radius: 10px;
-    /* Optional: subtle shadow */
 }
 
 .section h3 {
@@ -442,9 +441,6 @@ a {
     margin-bottom: 20px;
 }
 
-
-
-/* Optional styling for responsiveness */
 @media screen and (max-width: 1200px) {
     .container-box {
         flex-direction: column;
@@ -621,4 +617,33 @@ body{
 }
 .icon-button:focus{
     outline: none;
+}
+.ninth-container li img{
+    height: 96px;
+    width: 96px;
+
+}
+.ninth-container li {
+    height: 148.800px;
+    width: 426.663px;
+    padding: 24px;
+    display: flex;
+    margin-left: 30px;
+}
+.ninth-container li div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.ninth-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.ninth-container li div h3{
+  padding: 4px 0px;
+  margin: 0px;
+}
+.ninth-container li:hover{
+    background-color: rgba(36, 28, 21, .65);
 }
