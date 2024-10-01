@@ -156,7 +156,7 @@ a {
 .hover-arrow {
     display: inline-flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 20px 10px 0px;
     position: relative;
     cursor: pointer;
     overflow: hidden;
@@ -177,6 +177,7 @@ a {
   .hover-arrow .text {
     font-size: 16px;
     z-index: 1;
+    padding-left: 4px;
   }
   
   .hover-arrow .arrow {
@@ -516,7 +517,7 @@ body{
     position: relative;
 }
 
-.image-container img, .image-container dotlottie-player {
+.image-container img, .image-container .dotlottie-player {
     position: absolute;
     height: 100%;
     width: auto;
@@ -536,4 +537,88 @@ body{
     top: 0;
     left: 0;
     display: none;
+}
+.container-box .right .section{
+    margin-bottom: 0px;
+    padding-top: 120px;
+}
+.eight-container {
+    display: flex;
+}
+
+.text-container {
+    width: 715.6px;
+    height: 920px;
+    background-color: #e6b95f;
+    padding: 200px 0 80px 85px;
+    word-wrap: break-word;
+}
+
+.icon-button {
+    width: 533.34px;
+    height: 64px;
+    background: none;
+    border: none;
+    padding: 10px 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    outline: none;
+}
+
+.button-text {
+    width: 489.34px;
+    height: 21.33px;
+    font-size: 16px;
+    line-height: 21.33px;
+    color: inherit;
+    text-align: start;
+}
+
+.arrow-icon {
+    margin-left: 5px;
+    font-size: 20px;
+    line-height: 64px;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.fade.show {
+    opacity: 1;
+}
+
+.image-container {
+    overflow: hidden;
+    height: 920px;
+    width: 800.5px;
+    position: relative;
+}
+
+.image-container img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top: 0;
+    left: -90px;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.image-container img.hidden {
+    opacity: 0;
+}
+
+.image-container img .default {
+    opacity: 1;
+}
+.eight-container .hover-arrow{
+    width: 166.19px;
+    height: 72px;
+    padding-left:0px ;
+}
+.icon-button:focus{
+    outline: none;
 }
