@@ -217,6 +217,7 @@ a {
     padding: 32px;
     margin-left: 80px;
     margin-top: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 
   }
   .arrow {
@@ -337,7 +338,7 @@ a {
 
 .hover-arrow:hover::before {
     left: 0;
-    width: 100%; /* Expand the yellow background to cover text and arrow */
+    width: 100%; 
 }
 
 /* Rest of the CSS */
@@ -380,4 +381,159 @@ a {
     border-radius: 50%;
     padding: 5px;
     margin-right: 10px;
+}
+.container-box .right .section{
+    height: 657.6px;
+    width: 419.4px;
+    margin-bottom: 100px;
+}
+.container-box .right .section h3{
+    font-size: 32px;
+}
+.container-box .right .section p{
+    font-size: 20px;
+}
+.container-box {
+    display: flex;
+    width: 100%;
+    margin: 0px;
+}
+
+.left {
+    padding: 48px;
+    width: 855.6px;
+    height:100vh;
+    background-color: #f0f0eb; /* You can choose a background color or image */
+    position: sticky;
+    top: 0;
+    overflow-y: hidden; /* Initially hidden, will become scrollable later */
+}
+
+.right {
+    height: 1972.8px;
+    width: 860.605px;
+    padding: 0px 113.938px 0px 106.667px;
+    margin-right: 60px;
+   
+   
+}
+
+.section {
+    height: 657.6px;
+    width: 419.4px;
+    margin-bottom: 40px;
+    padding: 20px;
+    
+    border-radius: 10px;
+    /* Optional: subtle shadow */
+}
+
+.section h3 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.section p {
+    font-size: 20px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+/* Optional styling for responsiveness */
+@media screen and (max-width: 1200px) {
+    .container-box {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .section {
+        width: 100%;
+    }
+}
+body{
+    overflow-x: hidden;
+}
+.eight-container {
+    display: flex;
+}
+
+.text-container {
+    width: 715.6px;
+    height: 920px;
+    background-color: #e6b95f;
+    padding: 80px 0 80px 75.95px;
+    word-wrap: break-word;
+}
+
+.icon-button {
+    width: 533.34px;
+    height: 64px;
+    background: none;
+    border: none;
+    padding: 10px 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    outline: none;
+}
+
+.button-text {
+    width: 489.34px;
+    height: 21.33px;
+    font-size: 16px;
+    line-height: 21.33px;
+    color: inherit;
+    font-size: 16px;
+    text-align: start;
+}
+
+.arrow-icon {
+    margin-left: 5px;
+    font-size: 20px;
+    line-height: 64px;
+}
+
+.eight-container .nothing + .nothing2 + .nothing3 {
+    padding-right: 106.67px;
+}
+
+.icon-button:hover .arrow-icon-shadow {
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+    overflow: hidden;
+    height: 920px;
+    width: 800.5px;
+    position: relative;
+}
+
+.image-container img, .image-container dotlottie-player {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top: 0;
+    left: -90px;
+    display: none;
+}
+
+.image-container img.default {
+    display: block;
+}
+
+.dotlottie-player {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
 }

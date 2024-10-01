@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Content Example</title>
+    <style>
+        .eight-container {
+            display: flex;
+        }
+        .text-container {
+            width: 715.6px;
+            height: 920px;
+            background-color: #e6b95f;
+            padding: 80px 0 80px 75.95px;
+            word-wrap: break-word;
+        }
+        .icon-button {
+            width: 533.34px;
+            height: 64px;
+            background: none;
+            border: none;
+            padding: 10px 0px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            outline: none;
+        }
+        .button-text {
+            width: 489.34px;
+            height: 21.33px;
+            font-size: 16px;
+            line-height: 21.33px;
+            color: inherit;
+            text-align: start;
+        }
+        .arrow-icon {
+            margin-left: 5px;
+            font-size: 20px;
+            line-height: 64px;
+        }
+        .hover-arrow {
+            display: flex;
+            padding-left: 0px; /* Display flex to show the button properly */
+        }
+        .hover-arrow span {
+            margin-left: 5px; /* Space between text and arrow */
+        }
+    </style>
+</head>
+<body>
+    <div class="eight-container">
+        <div class="text-container">
+            <h2 style="font-size: 32px;">Keep customers ready to buy with engaging content</h2>
+            <div class="nothing">
+                <button class="icon-button">
+                    <span class="button-text">Content Optimizer</span>
+                    <span class="arrow-icon"><img width="12" height="12" src="https://img.icons8.com/ios-filled/12/collapse-arrow.png" alt="collapse-arrow" class="arrow-icon"/></span>
+                </button>
+                <p style="font-size: 20px;">
+                    Learn how your emails compare to the top-performing campaigns in your industry and get data-driven <br>suggestions for improving your copy, imagery, and <br>layout.
+                </p>
+                <div class="hover-arrow">
+                    <span class="text">Learn more</span>
+                    <span class="arrow"><img width="20" height="20" src="https://img.icons8.com/android/24/right.png" alt="right"></span>
+                </div>
+            </div>
+            <div class="nothing2">
+                <button class="icon-button">
+                    <span class="button-text">Creative Assistant</span>
+                    <span class="arrow-icon"><img width="12" height="12" src="https://img.icons8.com/ios-filled/12/collapse-arrow.png" alt="collapse-arrow" class="arrow-icon"/></span>
+                </button>
+                <p style="font-size: 20px;">
+                    Our Creative Assistant will help you stand out by using AI to create custom designs for your brand.
+                </p>
+                <div class="hover-arrow">
+                    <span class="text">Learn more</span>
+                    <span class="arrow"><img width="20" height="20" src="https://img.icons8.com/android/24/right.png" alt="right"></span>
+                </div>
+            </div>
+            <div class="nothing3">
+                <button class="icon-button">
+                    <span class="button-text">GDPR ready tools</span>
+                    <span class="arrow-icon"><img width="12" height="12" src="https://img.icons8.com/ios-filled/12/collapse-arrow.png" alt="collapse-arrow" class="arrow-icon"/></span>
+                </button>
+                <p style="font-size: 20px;">
+                    Mailchimp helps you achieve data security and privacy standards for your customers.
+                </p>
+                <div class="hover-arrow">
+                    <span class="text">Learn more</span>
+                    <span class="arrow"><img width="20" height="20" src="https://img.icons8.com/android/24/right.png" alt="right"></span>
+                </div>
+            </div>
+        </div>
+        <div class="image-container" style="overflow: hidden; height: 920px; width: 800.5px; position: relative;">
+            <img src="./assets/download.webp" alt="" style="position: absolute; height: 100%; width: auto; top: 0; left: -90px;">
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.icon-button').forEach((button, index) => {
+            button.addEventListener('click', function() {
+                const sectionClass = index === 0 ? '.nothing' : index === 1 ? '.nothing2' : '.nothing3'; // Select the appropriate section
+                const section = document.querySelector(sectionClass);
+                const paragraph = section.querySelector('p');
+                const hoverArrow = section.querySelector('.hover-arrow');
+
+                if (paragraph && hoverArrow) {
+                    if (paragraph.style.display === 'none' || !paragraph.style.display) {
+                        // Show paragraph and hover-arrow
+                        paragraph.style.display = 'block';
+                        hoverArrow.style.display = 'flex'; // Adjust as necessary for your layout
+                    } else {
+                        // Hide paragraph and hover-arrow
+                        paragraph.style.display = 'none';
+                        hoverArrow.style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
